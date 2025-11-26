@@ -32,15 +32,14 @@ const corsOptions = {
 };
 
 // connect to db
-// mongoose
-//   .connect("mongodb://localhost/sgbmi", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//   })
-//   .then((db) => console.log("Db Connected"))
-//   .catch((err) => console.log(err));
+mongoose.connect("mongodb://localhost/sgbmi", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  })
+  .then((db) => console.log("Db Connected"))
+  .catch((err) => console.log(err));
 
 //importando rutas
 const indexRoutes = require("./routes/index");
