@@ -6,7 +6,9 @@ const mongoose = require("mongoose");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config({
+  path: path.resolve(__dirname, "..", ".env"),
+});
 
 const app = express();
 const oneHour = 3600000;
